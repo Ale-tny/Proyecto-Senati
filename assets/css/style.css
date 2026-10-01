@@ -36,3 +36,19 @@ header{
     display: flex;
     align-items: center;
 }
+
+/* ==== MENU HAMBURGUESA ==== */
+.right-hamburguesa{
+    cursor: none; /* Desactivamos el cursor */
+    display: flex;
+    height: 28px;
+    width: 28px;
+    justify-content: space-between; /*Separacion entre ambos*/
+    flex-direction: column; /*Dirección Vertical */
+}
+.right-hamburguesa span{
+    background-color: #0000;
+    border-radius: 2px; /* Se crea un gruosor de la linea */
+    width: 100%; /* La amchura */
+    height: 3px; /*Alto */
+}
