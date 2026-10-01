@@ -24,7 +24,9 @@ header{
     display: flex;
     padding: 0 16px;
 }
-/* class="img-lo*/
+/* class="img-logo "*/
 .img-logo{
     height: 32px;
+    width: auto; /* por defecto quiero que se adapte */
+    display: block; /* Eliminar espacios entre los lados*/
 }
