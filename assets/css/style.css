@@ -1,54 +1,45 @@
-/* El selector universal*/
-/* 1. PRIMMERO declaras la fuente - FUERA del selector * */
-@font-face {
- font-family: "PopinsLocal";
- src: url("..//fonts/Poppins/Poppins-Regular.ttf") format(truetype);
- font-weight: normal;
- font-style: normal;
- font-display: swap;
-}
-/* 2. LUEGO aplicas a TODO con el selector universal */
-*{
- font-family: "PoppinsLocal", Arial, sans-serif;
- margin: 0; /*En celular ponemos los margenes em 0 para asi poder editar a nuestro gusto*/
- padding: 0; /* En celular ponemos los rellenos en 0 para asi poder editar a nuestro gusto*/
- box-sizing: border-box; /*El comportamiento por defecto de los navegadores*/
-}
-body{
-    background-color: #0000; /* Color de fondo BLANCO*/
-}
+   * { box-sizing: border-box; margin: 0; font-family: "Inter", Arial, sans-serif; }
 
-header{
-    background-color: #ffff; /* Color del fondo NEGRO*/
-    height: 55px; /* Altura de la barra de MENU*/
-    display: flex;
-    padding: 0 16px;
-}
-/* class="img-logo "*/
-.img-logo{
-    height: 32px;
-    width: auto; /* por defecto quiero que se adapte */
-    display: block; /* Eliminar espacios entre los lados */
-    object-fit: contain; /*Ajusta la imagen, sim recortarse a los lados */
-}
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #22c0d3;
+    }
 
-.left-img{
-    display: flex;
-    align-items: center;
-}
+    form {
+      position: relative;
+      width: 320px;
+      min-height: 520px;
+      padding: 90px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #fff;
+      border: 2px solid #4a4fd1;
+    }
 
-/* ==== MENU HAMBURGUESA ==== */
-.right-hamburguesa{
-    cursor: none; /* Desactivamos el cursor */
-    display: flex;
-    height: 28px;
-    width: 28px;
-    justify-content: space-between; /*Separacion entre ambos*/
-    flex-direction: column; /*Dirección Vertical */
-}
-.right-hamburguesa span{
-    background-color: #0000;
-    border-radius: 2px; /* Se crea un gruosor de la linea */
-    width: 100%; /* La amchura */
-    height: 3px; /*Alto */
-}
+    .logo { position: absolute; top: 12px; left: 12px; font-size: 28px; }
+
+    h1 { margin-bottom: 24px; text-align: center; font-weight: 400; font-size: 26px; }
+
+    label { font-size: 16px; margin-top: 12px; }
+
+    input {
+      height: 34px;
+      padding: 0 8px;
+      border: 1px solid #000;
+      font-size: 15px;
+    }
+    input:focus { outline: 2px solid #4a4fd1; }
+
+    button {
+      align-self: center;
+      margin-top: 36px;
+      padding: 8px 14px;
+      background: #fff;
+      border: 1px solid #000;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:hover { background: #22c0d3; }
