@@ -28,5 +28,11 @@ header{
 .img-logo{
     height: 32px;
     width: auto; /* por defecto quiero que se adapte */
-    display: block; /* Eliminar espacios entre los lados*/
+    display: block; /* Eliminar espacios entre los lados */
+    object-fit: contain; /*Ajusta la imagen, sim recortarse a los lados */
+}
+
+.left-img{
+    display: flex;
+    align-items: center;
 }
