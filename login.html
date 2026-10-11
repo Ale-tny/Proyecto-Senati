@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+  <main class="pantalla">
+    <img class="logo" src="assets/image/logo.png" alt="Logo" width="64" height="56">
+
+    <form class="tarjeta" action="dashboard.html">
+      <h1>Iniciar Sesión</h1>
+
+      <label>Correo Electronico
+        <input type="email">
+      </label>
+
+      <label>Contraseña
+        <input type="password">
+      </label>
+
+      <button class="boton" type="submit">INICIAR</button>
+
+      <a class="boton-face" href="asistencia.html">
+        <!-- Icono Face ID (SVG) -->
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 15V10a6 6 0 0 1 6-6h5M33 4h5a6 6 0 0 1 6 6v5M44 33v5a6 6 0 0 1-6 6h-5M15 44h-5a6 6 0 0 1-6-6v-5"/>
+          <path d="M17 16v5M31 16v5M24 16v8h-3M17 33c4 3 10 3 14 0"/>
+        </svg>
+        Acceder con Face ID
+        <i class="fa-solid fa-arrow-up-right"></i>
+      </a>
+
+      <a class="enlace" href="asistencia.html">Usar código de acceso</a>
+    </form>
+  </main>
+
+</body>
+</html>
