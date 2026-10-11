@@ -192,3 +192,44 @@ input {
     height: 100px;
   }
 }
+
+/* ---------- Interacción (JS) ---------- */
+.campo i {
+  cursor: pointer;
+}
+
+.escaneando {
+  animation: pulso 1s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  50% {
+    box-shadow: 0 0 0 14px rgba(63, 230, 234, 0.4);
+  }
+}
+
+.boton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ---------- Cámara ---------- */
+.escaner {
+  overflow: hidden;
+}
+
+.escaner video {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* efecto espejo */
+}
+
+.escaneando video {
+  display: block;
+}
+
+.escaneando svg {
+  display: none;
+}
