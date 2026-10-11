@@ -1,0 +1,194 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fondo: #00c8d4;
+  --oscuro: #3a2e2e;
+  --azul: #1aa7d6;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--fondo);
+  color: #000;
+  padding: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pantalla {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 90px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #222; /* se ve mientras no pongas la imagen */
+}
+
+/* ---------- Tarjeta ---------- */
+.tarjeta {
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #000;
+  border-radius: 32px;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  font-size: 1.05rem;
+}
+
+/* ---------- Escáner ---------- */
+.escaner {
+  width: 140px;
+  height: 140px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: #d9d9d9;
+  display: grid;
+  place-items: center;
+}
+
+.escaner svg {
+  width: 85px;
+  height: 85px;
+}
+
+/* ---------- Código de empleado ---------- */
+label {
+  width: 100%;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo {
+  position: relative;
+  display: block;
+}
+
+input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #000;
+  border-radius: 999px;
+  padding: 0 40px 0 12px;
+  font: inherit;
+  background: #fff;
+}
+
+.campo i {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.boton {
+  background: var(--oscuro);
+  color: var(--azul);
+  border: none;
+  border-radius: 999px;
+  padding: 12px 32px;
+  font: inherit;
+  font-weight: 600;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+/* ---------- Tablet: escáner a la izquierda, código a la derecha ---------- */
+@media (min-width: 768px) {
+  .pantalla {
+    justify-content: center;
+    padding-top: 70px;
+  }
+
+  .tarjeta {
+    max-width: 640px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 12px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .escaner {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  p {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  label {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+  }
+
+  .boton {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    margin-top: 0;
+  }
+}
+
+/* ---------- Escritorio ---------- */
+@media (min-width: 1024px) {
+  .tarjeta {
+    max-width: 760px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .escaner {
+    width: 170px;
+    height: 170px;
+  }
+
+  .escaner svg {
+    width: 100px;
+    height: 100px;
+  }
+}
